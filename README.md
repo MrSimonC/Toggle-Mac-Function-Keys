@@ -1,2 +1,35 @@
-# Toggle-Mac-Function-Keys
-This AppleScript allows you to automate the toggling of using Function Keys vs Media Keys on MacOS
+# Toggle Mac Function Keys
+
+This AppleScript allows you to automate the toggling of using Function Keys vs Media Keys on MacOS. Useful for VS Code debugging other applications. The switching back to your media keys.
+
+Essentially it does the job one would have to do manually: Open System Preferences, go to Keyboard, click "Use F1, F2 etc. keys as standard function keys".
+
+Tested with: MacOS Big Sur, 11.4, June 2021
+
+## Instructions for use
+
+1. On your mac, open Script Editor
+2. Copy / paste the contents of `Toggle Function Keys.scpt`
+3. File Save / Hold option: File, Save As
+4. Save the script as an application:
+   1. Choose filename (e.g. "Toggle Function Keys")
+   2. File format: Application
+   3. Save to Applications Folder
+5. Double click from the applications folder
+6. Enable the script to be run by going into System Preferences, Security & Privacy, unlocking the dialogue box, then selecting (usually in Accessibility) `Toggle Function Keys` and whatever else it needs to run
+
+## Running
+
+For me, the easiest method I've found is to use `cmd` + `space` to search for "Toggle Function Keys" and run it from there.
+
+## Other ideas for running the app
+
+Other ideas I've not had success with:
+
+* I have tried adding an automator with "no input", adding "apple script", pasting in the code, then System Preferences, Keyboard, Shortcuts, Services - then choosing Toggle Function Keys and assiging a shortcut. Seems to only work when your focus isn't in an app which uses your assigned shortcut/seems to only activate once.
+* Adding script editor to main menu - seems too messy/ugly as a solution as it's hard to restrict down to just the script
+* Adding a standard keyboard shortcut to this application doesn't work as it has not "required" menu item to select
+
+## Background
+
+This script was adapted from other, non-working older scripts I found on the internet. Many don't seem to wait for the UI to appear, so I added that to the script. Also had the wrong UI text reference and provided feedback via a pop up but I've removed this as this interrupts the user-flow when used a lot.
