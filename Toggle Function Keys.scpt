@@ -13,7 +13,12 @@ tell application "System Events"
 				delay 0.5
 			end repeat
 			click radio button "Keyboard" of tab group 1 of window "Keyboard"
-			click checkbox "Use F1, F2, etc. keys as standard function keys" of tab group 1 of window "Keyboard"
+			try
+				click checkbox "Use F1, F2, etc. keys as standard function keys on external keyboards" of tab group 1 of window "Keyboard"
+			end try
+			try
+				click checkbox "Use F1, F2, etc. keys as standard function keys" of tab group 1 of window "Keyboard"
+			end try
 		end tell
 		tell application "System Preferences" to quit
 	else
