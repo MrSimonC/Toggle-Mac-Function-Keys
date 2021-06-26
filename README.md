@@ -1,6 +1,6 @@
 # Toggle Mac Function Keys
 
-This AppleScript allows you to automate the toggling of using Function Keys vs Media Keys on MacOS. Useful for VS Code debugging other applications. The switching back to your media keys.
+This AppleScript allows you to automate the toggling of using Function Keys vs Media Keys on MacOS. Useful for VS Code debugging other applications. Then, switching back to your media keys.
 
 Essentially it does the job one would have to do manually: Open System Preferences, go to Keyboard, click "Use F1, F2 etc. keys as standard function keys".
 
@@ -20,7 +20,9 @@ Tested with: MacOS Big Sur, 11.4, June 2021
 
 ## Running
 
-For me, the easiest method I've found is to use `cmd` + `space` to search for "Toggle Function Keys" and run it from there.
+For me, the easiest method I've found is to use `cmd` + `space` to search for "Toggle Function Keys" and run it from there. Or drag the application to the dock and click to trigger it.
+
+Other people have had success binding to a keyboard shortcut with a paid app. e.g. [here](https://folivora.ai).
 
 ## Other ideas for running the app
 
@@ -32,4 +34,4 @@ Other ideas I've not had success with:
 
 ## Background
 
-This script was adapted from other, non-working older scripts I found on the internet. Many don't seem to wait for the UI to appear, so I added that to the script. Also had the wrong UI text reference and provided feedback via a pop up but I've removed this as this interrupts the user-flow when used a lot.
+This script was adapted from other, non-working older scripts I found on the internet. Many don't seem to wait for the UI to appear, so I added that to the script. Also had the wrong UI text reference (to be fair, Apple change this between the M1 mac and old MacOS versions). Old scripts used to provide feedback via a pop up but I've removed this as this interrupts the user-flow when used a lot.
