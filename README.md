@@ -4,7 +4,9 @@ This AppleScript allows you to automate the toggling of using Function Keys vs M
 
 Essentially it does the job one would have to do manually: Open System Preferences, go to Keyboard, click "Use F1, F2 etc. keys as standard function keys".
 
-Tested with: MacOS Big Sur, 11.4, June 2021
+Tested with: 
+* MacOS Monterey, 12.6.2, December 2022
+* MacOS Big Sur, 11.4, June 2021
 
 ## Instructions for use
 
