@@ -5,46 +5,50 @@
 set osver to system version of (system info)
 
 if osver > 13.0 then
-	-- Full credit for this section to https://www.reddit.com/user/mflboys/ for creating MacOS Ventura code:
-	-- from https://www.reddit.com/r/shortcuts/comments/yjlxvo/macos_ventura_shortcut_toggle_function_keys_f1f2/
 	open location "x-apple.systempreferences:com.apple.Keyboard-Settings.extension"
 	
 	tell application "System Events" to tell process "System Settings"
-		repeat until window "Keyboard" exists
+		# example window title: "Keyboard – ￼86%", so "begins with" is needed
+		repeat until window begins with "Keyboard" exists
 		end repeat
 		
-		tell window "Keyboard"
-			# "Keyboard Shortcuts..." Button
-			click button 1 of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1
-			
-			repeat until sheet 1 exists
-			end repeat
-			
-			# Click Function Keys
-			keystroke "f"
-			
-			repeat until checkbox "Use F1, F2, etc. keys as standard function keys" of group 1 of scroll area 1 of group 2 of splitter group 1 of group 1 of sheet 1 exists
-			end repeat
-			
-			click checkbox "Use F1, F2, etc. keys as standard function keys" of group 1 of scroll area 1 of group 2 of splitter group 1 of group 1 of sheet 1
-			
-			# "Done" Button - Close the sheet so the application can quit
-			click button 1 of group 2 of splitter group 1 of group 1 of sheet 1
-			
-			# Attempting to check the sheet at a certain point while closing will throw an error
-			# In that case, the outer repeat will try again
-			repeat
-				try
-					repeat while sheet 1 exists
-					end repeat
-					exit repeat
-				end try
-			end repeat
-			
-		end tell
+		# wait until Keyboard window is the main window of the application and is accessible
+		repeat until exists of (1st window whose value of attribute "AXMain" is true)
+		end repeat
+		
+		# wait until the group is displayed (needed else fails on Apple M2 Pro)
+		repeat until exists group 1 of group 2 of splitter group 1 of group 1 of window 1
+		end repeat
+		
+		# "Keyboard Shortcuts..." Button
+		click button 1 of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
+		
+		repeat until sheet 1 of window 1 exists
+		end repeat
+		
+		# Click Function Keys
+		keystroke "f"
+		
+		repeat until checkbox "Use F1, F2, etc. keys as standard function keys" of group 1 of scroll area 1 of group 2 of splitter group 1 of group 1 of sheet 1 of window 1 exists
+		end repeat
+		
+		click checkbox "Use F1, F2, etc. keys as standard function keys" of group 1 of scroll area 1 of group 2 of splitter group 1 of group 1 of sheet 1 of window 1
+		
+		# "Done" Button - Close the sheet so the application can quit
+		click button 1 of group 2 of splitter group 1 of group 1 of sheet 1 of window 1
+		
+		# Attempting to check the sheet at a certain point while closing will throw an error
+		# In that case, the outer repeat will try again
+		repeat
+			try
+				repeat while sheet 1 of window 1 exists
+				end repeat
+				exit repeat
+			end try
+		end repeat
 	end tell
 	
-	tell application "System Preferences" to quit
+	tell application "System Settings" to quit
 else
 	-- Below for MacOS Monterey and below
 	tell application "System Preferences"
