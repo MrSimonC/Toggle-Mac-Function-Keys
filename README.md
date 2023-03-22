@@ -29,7 +29,7 @@ Other people have had success binding to a keyboard shortcut with a paid app. e.
 
 ### At Startup
 
-In a tip from [@SoftTransistor](https://github.com/SoftTransistor) you could add the script to your login items to trigger switching keys each time you start up.
+In a tip given from [@SoftTransistor](https://github.com/SoftTransistor) you could add the script to your login items to trigger switching keys each time you start up.
 
 ![mac startup](mac-startup.png)
 
