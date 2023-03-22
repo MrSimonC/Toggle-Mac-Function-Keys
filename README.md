@@ -48,3 +48,4 @@ This script was adapted from other, non-working older scripts I found on the int
 ## Credits
 
 * Credit for the basis of the `if osver > 13.0 then` section goes to [mflboys](https://www.reddit.com/user/mflboys/) for creating MacOS Ventura code [source](https://www.reddit.com/r/shortcuts/comments/yjlxvo/macos_ventura_shortcut_toggle_function_keys_f1f2/)
+* Credit to [@SoftTransistor](https://github.com/SoftTransistor) for the login items tip. Thanks!
