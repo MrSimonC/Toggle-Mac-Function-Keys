@@ -27,7 +27,13 @@ For me, the easiest method I've found is to use `cmd` + `space` to search for "T
 
 Other people have had success binding to a keyboard shortcut with a paid app. e.g. [here](https://folivora.ai).
 
-## Other ideas for running the app
+### At Startup
+
+In a tip from [@SoftTransistor](https://github.com/SoftTransistor) you could add the script to your login items to trigger switching keys each time you start up.
+
+![mac startup](mac-startup.png)
+
+### Other ideas for running the app
 
 Other ideas I've not had success with:
 
