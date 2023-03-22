@@ -27,7 +27,13 @@ For me, the easiest method I've found is to use `cmd` + `space` to search for "T
 
 Other people have had success binding to a keyboard shortcut with a paid app. e.g. [here](https://folivora.ai).
 
-## Other ideas for running the app
+### At Startup
+
+In a tip given from [@SoftTransistor](https://github.com/SoftTransistor) you could add the script to your login items to trigger switching keys each time you start up.
+
+![mac startup](mac-startup.png)
+
+### Other ideas for running the app
 
 Other ideas I've not had success with:
 
@@ -42,3 +48,4 @@ This script was adapted from other, non-working older scripts I found on the int
 ## Credits
 
 * Credit for the basis of the `if osver > 13.0 then` section goes to [mflboys](https://www.reddit.com/user/mflboys/) for creating MacOS Ventura code [source](https://www.reddit.com/r/shortcuts/comments/yjlxvo/macos_ventura_shortcut_toggle_function_keys_f1f2/)
+* Credit to [@SoftTransistor](https://github.com/SoftTransistor) for the login items tip. Thanks!
