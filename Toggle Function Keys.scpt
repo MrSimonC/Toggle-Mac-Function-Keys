@@ -21,7 +21,7 @@ if osver > 13.0 then
 		end repeat
 		
 		# "Keyboard Shortcuts..." Button
-		click button 1 of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
+		click button 3 of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
 		
 		repeat until sheet 1 of window 1 exists
 		end repeat
