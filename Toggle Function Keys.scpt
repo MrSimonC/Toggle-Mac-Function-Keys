@@ -1,10 +1,10 @@
 -- Apple Script (i.e. Use in Apple's Script Editor Application) to Toggle Function Keys / Media keys on/off
--- Tested on MacOS Monterey (12.6.2) Dec 2022, MacOS Ventura (13.0.1) Dec 2022
+-- Tested on MacOS Monterey (12.6.2) July 2023, MacOS Ventura (13.0.1) Dec 2022
 -- Project Path: https://github.com/MrSimonC/Toggle-Mac-Function-Keys
 
 set osver to system version of (system info)
 
-if osver > 13.0 then
+if osver ≥ 13.0 then
 	open location "x-apple.systempreferences:com.apple.Keyboard-Settings.extension"
 	
 	tell application "System Events" to tell process "System Settings"
@@ -21,7 +21,12 @@ if osver > 13.0 then
 		end repeat
 		
 		# "Keyboard Shortcuts..." Button
-		click button 1 of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
+		set keyboardButton to 1
+		# in MacOS 14 Sonoma, button 1 & 2 are assigned to keyboard brightness
+		if osver ≥ 14.0 then
+			set keyboardButton to 3
+		end if
+		click button keyboardButton of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
 		
 		repeat until sheet 1 of window 1 exists
 		end repeat
@@ -49,9 +54,9 @@ if osver > 13.0 then
 	end tell
 	
 	tell application "System Settings" to quit
-else
+else if osver < 13.0 then
 	-- Below for MacOS Monterey and below
-	tell application "System Preferences"
+	tell application "System Settings"
 		set current pane to pane "com.apple.preference.keyboard"
 	end tell
 	
