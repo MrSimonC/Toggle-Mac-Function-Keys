@@ -56,7 +56,7 @@ if osver ≥ 13.0 then
 	tell application "System Settings" to quit
 else if osver < 13.0 then
 	-- Below for MacOS Monterey and below
-	tell application "System Settings"
+	tell application "System Preferences"
 		set current pane to pane "com.apple.preference.keyboard"
 	end tell
 	
