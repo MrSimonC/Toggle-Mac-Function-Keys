@@ -22,9 +22,9 @@ if osver ≥ 13.0 then
 		
 		# "Keyboard Shortcuts..." Button
 		set keyboardButton to 1
-		# in MacOS 14 Sonoma, button 1 & 2 are assigned to keyboard brightness
+		# in MacOS 14 Sonoma, button 1 & 2 are assigned to keyboard brightness (Original was 3, edge3uk set to 0 to fix on Sonoma b6)
 		if osver ≥ 14.0 then
-			set keyboardButton to 3
+			set keyboardButton to 0
 		end if
 		click button keyboardButton of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
 		
