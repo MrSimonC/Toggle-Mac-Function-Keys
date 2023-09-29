@@ -4,7 +4,8 @@ This AppleScript allows you to automate the toggling of using Function Keys vs M
 
 Essentially it does the job one would have to do manually: Open System Preferences, go to Keyboard, click "Use F1, F2 etc. keys as standard function keys".
 
-Tested with: 
+Tested with:
+* MacOS Sonoma, 14.0 September 2023
 * MacOS Ventura, 13.2 January 2023
 * MacOS Monterey, 12.6.2, December 2022
 * MacOS Big Sur, 11.4, June 2021
@@ -49,4 +50,4 @@ This script was adapted from other, non-working older scripts I found on the int
 
 * Credit for the basis of the `if osver > 13.0 then` section goes to [mflboys](https://www.reddit.com/user/mflboys/) for creating MacOS Ventura code [source](https://www.reddit.com/r/shortcuts/comments/yjlxvo/macos_ventura_shortcut_toggle_function_keys_f1f2/)
 * Credit to [@SoftTransistor](https://github.com/SoftTransistor) for the login items tip. Thanks!
-* Thanks to [@hdecoded](https://github.com/hdecoded) for testing on macOS14 beta.
+* Thanks to [@hdecoded](https://github.com/hdecoded) and [@edge3uk](https://github.com/edge3uk) for testing on macOS14 beta.
