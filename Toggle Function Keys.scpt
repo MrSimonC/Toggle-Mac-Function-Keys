@@ -20,12 +20,18 @@ if osver ≥ 13.0 then
 		repeat until exists group 1 of group 2 of splitter group 1 of group 1 of window 1
 		end repeat
 		
-		# "Keyboard Shortcuts..." Button
-		set keyboardButton to 1
-		click button keyboardButton of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
-		
-		repeat until sheet 1 of window 1 exists
-		end repeat
+		if osver ≥ 14.0 then
+			tell application "System Settings"
+				reveal anchor "FunctionKeys" of pane id "com.apple.Keyboard-Settings.extension"
+			end tell
+		else
+			# "Keyboard Shortcuts..." Button
+			set keyboardButton to 1
+			click button keyboardButton of group 2 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
+			
+			repeat until sheet 1 of window 1 exists
+			end repeat
+		end if
 		
 		# Click Function Keys
 		keystroke "f"
@@ -52,7 +58,7 @@ if osver ≥ 13.0 then
 	tell application "System Settings" to quit
 else if osver < 13.0 then
 	-- Below for MacOS Monterey and below
-	tell application "System Preferences"
+	tell application "System Settings"
 		set current pane to pane "com.apple.preference.keyboard"
 	end tell
 	
@@ -70,10 +76,10 @@ else if osver < 13.0 then
 					click checkbox "Use F1, F2, etc. keys as standard function keys" of tab group 1 of window "Keyboard"
 				end try
 			end tell
-			tell application "System Preferences" to quit
+			tell application "System Settings" to quit
 		else
 			-- GUI scripting not enabled.  Display an alert
-			tell application "System Preferences"
+			tell application "System Settings"
 				activate
 				set current pane to pane "com.apple.preference.security"
 				display dialog "UI element scripting is not enabled. Please activate this app under Privacy -> Accessibility so it can access the settings it needs."
