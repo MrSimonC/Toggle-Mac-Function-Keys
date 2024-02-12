@@ -14,13 +14,14 @@ Tested with:
 
 1. On your mac, open Script Editor
 2. Copy / paste the contents of `Toggle Function Keys.scpt`
-3. File Save / Hold option: File, Save As
+3. File, Export (*note: do not use Save As, which won't ask for permissions properly*)
 4. Save the script as an application:
    1. Choose filename (e.g. "Toggle Function Keys")
-   2. File format: Application
-   3. Save to Applications Folder
+   2. Save to Applications Folder
+   3. File format: Application
+   4. Code Sign: Sign to Run Locally
 5. Double click from the applications folder
-6. Enable the script to be run by going into System Preferences, Security & Privacy, unlocking the dialogue box, then selecting (usually in Accessibility) `Toggle Function Keys` and whatever else it needs to run
+6. Enable the script to be run by going into System Preferences, Security & Privacy, [unlocking the dialogue box on older MacOS versions], then selecting (usually in Accessibility) `Toggle Function Keys`. Running a second time will ask you to Allow access to control System Events - press Allow (*which adds an extra permission in Settings > Privacy & Security > Automation. If this step does not appear & the script fails to run, then go back to step 3 and ensure you choose: File, Export*)
 
 ## Running
 
