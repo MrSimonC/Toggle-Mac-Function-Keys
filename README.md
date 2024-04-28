@@ -21,7 +21,7 @@ Tested with:
    3. File format: Application
    4. Code Sign: Sign to Run Locally
 5. Double click from the applications folder
-6. Enable the script to be run by going into System Preferences, Security & Privacy, [unlocking the dialogue box on older MacOS versions], then selecting (usually in Accessibility) `Toggle Function Keys`. Running a second time will ask you to Allow access to control System Events - press Allow (*which adds an extra permission in Settings > Privacy & Security > Automation. If this step does not appear & the script fails to run, then go back to step 3 and ensure you choose: File, Export*)
+6. Enable the script to be run by going into System Preferences, Security & Privacy, [unlocking the dialogue box on older MacOS versions], then selecting (usually in Accessibility) `Toggle Function Keys`. Running a second time will ask you to Allow access to control System Events - press Allow (*which adds an extra permission in Settings > Privacy & Security > Automation. If this step does not appear & the script fails to run, then go back to step 3 and ensure you choose: File, Export - but this time save to the Desktop. Then follow step 5 & 6 then drag from the Desktop to Applications*)
 
 ## Running
 
