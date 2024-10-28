@@ -1,5 +1,5 @@
 -- Apple Script (i.e. Use in Apple's Script Editor Application) to Toggle Function Keys / Media keys on/off
--- Tested on MacOS Sonoma (14.2.1) Jan 2024, MacOS Monterey (12.6.2) July 2023, MacOS Ventura (13.4.1) July 2023
+-- Tested on MacOS Sequoia (15.0.1) October 2024, MacOS Sonoma (14.2.1) Jan 2024, MacOS Monterey (12.6.2) July 2023, MacOS Ventura (13.4.1) July 2023
 -- Project Path: https://github.com/MrSimonC/Toggle-Mac-Function-Keys
 
 set osver to system version of (system info)
