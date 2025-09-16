@@ -1,11 +1,22 @@
 -- Apple Script (i.e. Use in Apple's Script Editor Application) to Toggle Function Keys / Media keys on/off
--- Tested on MacOS Sequoia (15.4.1) April 2025, MacOS Sonoma (14.2.1) Jan 2024, MacOS Monterey (12.6.2) July 2023, MacOS Ventura (13.4.1) July 2023
+-- Tested on MacOS Tahoe (26.0) Sep 2025, Sequoia (15.4.1) April 2025, MacOS Sonoma (14.2.1) Jan 2024, MacOS Monterey (12.6.2) July 2023, MacOS Ventura (13.4.1) July 2023
 -- Project Path: https://github.com/MrSimonC/Toggle-Mac-Function-Keys
 
 set osver to system version of (system info)
 
 if osver ≥ 13.0 then
 	open location "x-apple.systempreferences:com.apple.Keyboard-Settings.extension"
+	
+	tell application "System Events"
+		repeat until exists process "System Settings"
+			delay 0.1
+		end repeat
+		tell process "System Settings"
+			repeat until exists window 1
+				delay 0.1
+			end repeat
+		end tell
+	end tell
 	
 	if osver ≥ 14.0 then
 		tell application "System Settings"

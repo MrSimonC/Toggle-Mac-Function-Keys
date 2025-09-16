@@ -5,6 +5,7 @@ This AppleScript allows you to automate the toggling of using Function Keys vs M
 Essentially it does the job one would have to do manually: Open System Preferences, go to Keyboard, click "Use F1, F2 etc. keys as standard function keys".
 
 Tested with:
+* MacOS Tahoe, 26.0, September 2025
 * MacOS Sequoia, 15.4.1, April 2025
 * MacOS Sonoma, 14.2.1, January 2024
 * MacOS Ventura, 13.2, January 2023
@@ -22,7 +23,11 @@ Tested with:
    3. File format: Application
    4. Code Sign: Sign to Run Locally
 5. Double click from the applications folder
-6. Enable the script to be run by going into System Preferences, Security & Privacy, [unlocking the dialogue box on older MacOS versions], then selecting (usually in Accessibility) `Toggle Function Keys`. Running a second time will ask you to Allow access to control System Events - press Allow (*which adds an extra permission in Settings > Privacy & Security > Automation. If this step does not appear & the script fails to run, then go back to step 3 and ensure you choose: File, Export - but this time save to the Desktop. Then follow step 5 & 6 then drag from the Desktop to Applications*)
+6. Enable the script to be run by going into System Preferences, Privacy & Security, [unlocking the dialogue box on older MacOS versions], then selecting (usually in Accessibility) `Toggle Function Keys`. Running a second time will ask you to Allow access to control System Events - press Allow (*which adds an extra permission in Settings > Privacy & Security > Automation. If this step does not appear & the script fails to run, then go back to step 3 and ensure you choose: File, Export - but this time save to the Desktop. Then follow step 5 & 6 then drag from the Desktop to Applications*).
+
+## Permission Troubleshooting
+
+MacOS Tahoe (Sep 2025): When upgrading to MacOS Tahoe, I had to re-grant permissions for the app to run. If you have issues, try following the steps above. Then, what worked for me was Settings > Privacy & Security > Accessibility - then revoking access for the app, then remove it. Close System Settings. Double click the app, go back (Settings > Privacy & Security > Accessibility). I found the app entry had returned but with permission unchecked. Check it, then run the app again. This time it ran, asked for the second permission to control System Events - press Allow.
 
 ## Running
 
